@@ -1,0 +1,7 @@
+{
+  "id": "theme-maple",
+  "name": "Maple",
+  "version": "0.1.0",
+  "description": "Autumn bark. Maple-leaf red, late light.",
+  "main": "dist/index.js"
+}

@@ -1,0 +1,62 @@
+/**
+ * Maple — satellite Dripnex theme.
+ * Token layer only. Same contract as a community theme repo.
+ * Must be CommonJS.
+ *
+ * Autumn bark, maple-leaf red accent, late light.
+ * Not ember (frosted copper). Not walnut (wood cream).
+ * Not espresso (coffee roast). Not saffron (gold spice).
+ * Not dune (desert terracotta). Not apricot (peach paper light).
+ */
+
+const TOKENS = {
+  '--bg-base': '#1b1410',
+  '--bg-surface': '#261c16',
+  '--bg-elevated': '#33251c',
+  '--bg-inset': '#120d0a',
+  '--bg-hover': 'rgba(243, 228, 200, 0.06)',
+  '--bg-active': 'rgba(243, 228, 200, 0.1)',
+  '--text-primary': '#f3e4c8',
+  '--text-secondary': 'rgba(243, 228, 200, 0.74)',
+  '--text-muted': 'rgba(243, 228, 200, 0.52)',
+  '--text-faint': 'rgba(243, 228, 200, 0.34)',
+  '--border': 'rgba(243, 228, 200, 0.12)',
+  '--border-subtle': 'rgba(243, 228, 200, 0.07)',
+  '--border-strong': 'rgba(243, 228, 200, 0.18)',
+  '--accent': '#c85a32',
+  '--accent-hover': '#de7048',
+  '--accent-muted': 'rgba(200, 90, 50, 0.2)',
+  '--accent-subtle': 'rgba(200, 90, 50, 0.1)',
+  '--glass-bg': 'rgba(27, 20, 16, 0.92)',
+  '--glass-border': 'rgba(243, 228, 200, 0.1)',
+  '--glass-bg-menu': 'rgba(51, 37, 28, 0.96)',
+  '--glass-border-menu': 'rgba(243, 228, 200, 0.1)',
+  '--status-active': '#c85a32',
+  '--status-on-hold': '#d4a04a',
+  '--status-completed': '#6aaa6a',
+  '--status-dropped': '#c46b6b',
+};
+
+module.exports = {
+  id: 'theme-maple',
+  name: 'Maple',
+  version: '0.1.0',
+  description: 'Autumn bark. Maple-leaf red, late light.',
+
+  activate(context) {
+    const remove = context.registerTheme({
+      id: 'dripnex-maple',
+      name: 'Maple',
+      description: 'Autumn bark. Maple-leaf red, late light.',
+      author: 'Dripnex',
+      colorScheme: 'dark',
+      tokens: TOKENS,
+    });
+
+    return {
+      dispose() {
+        remove();
+      },
+    };
+  },
+};
